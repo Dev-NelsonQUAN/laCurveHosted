@@ -1,0 +1,35 @@
+.Vendors{
+    width: 100%;
+    min-height: 100vh;
+    height: max-content;
+    background: orange;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.VendorLower{
+    width: 100%;
+    height: 100%;
+    background: green;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.VendorsInner{
+    width: 60%;
+    /* height: 80%; */
+    height: auto;
+    /* background: #000; */
+    /* overflow-y: auto; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+}
+
+

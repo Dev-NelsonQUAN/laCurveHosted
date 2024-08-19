@@ -1,0 +1,24 @@
+.Menu{
+    width: 100%;
+    min-height: 90vh;
+    height: max-content;
+    /* background: #ffc401b2; */
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.MenuInner{
+    width: 70%;
+    min-height: 80vh;
+    height: max-content;
+    background: rgba(0, 0, 0, 0.596);
+    backdrop-filter: blur(40px);
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}

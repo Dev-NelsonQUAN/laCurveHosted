@@ -1,0 +1,38 @@
+.CartHolder{
+    width: 100%;
+    min-height: 90vh;
+    height: max-content;
+    background: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.CartInner{
+    width: 80%;
+    height: 60%;
+    background: rgb(5, 40, 155);
+}
+
+
+/* @media screen and (width <= 520px) {
+    .CartInfo{
+        font-size: 12px;
+    }
+    .CartClear{
+        width: 50px;
+        font-size: 8px;
+    }
+}
+@media screen and (width <= 340px) {
+    .CartInfo{
+        font-size: 10px;
+        align-items: center;
+    }
+    .CartClear{
+        width: 50px;
+        height: 25px;
+        font-size: 8px;
+    }
+} */

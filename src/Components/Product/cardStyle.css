@@ -1,0 +1,61 @@
+.cardWrapper{
+    width: 31%;
+    height: 50vh;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "poppins", sans-serif;
+}
+.card-img{
+    width: 70%;
+    height: 50%;
+    /* background-color: aqua; */
+
+
+    &
+    img{
+        width: 100%;
+        height: 100%;
+        
+    }
+}
+.product-name{
+    width: 50%;
+    height: 15%;
+    font-weight: bold;
+    text-align: center;
+    /* background-color: azure; */
+}
+.product-price{
+    width: 50%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    /* background-color: azure; */
+
+}
+.btnHolder{
+    width: 100%;
+    height: 40px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.addCartbtn{
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    color: whitesmoke;
+    border: none;
+    transform: scale(1ms);
+    border-radius: 20px;
+
+}
+.addCartbtn:hover{
+    cursor: pointer;
+    transition: 3ms ease-in-out;
+    transform: scale(1.5ms);
+}

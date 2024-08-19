@@ -1,0 +1,65 @@
+.MenuItemsHolder{
+    width: 31%;
+    height: 49vh;
+    background: orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: var(--padding);
+    font-family: "poppins", sans-serif;
+}
+
+.MenuImg{
+    width: 98%;
+    height: 65%;
+    /* background: whitesmoke; */
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 10px 0px 0px;
+        object-fit: cover;
+        aspect-ratio: 1/2;
+    }
+}
+
+.MenuName{
+    width: 98%;
+    height: 35%;
+    /* background: chartreuse; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 1px;
+}
+
+.MenuH5{
+    font-size: 20px;
+}
+
+.MenuDes{
+    width: 94%;
+    font-size: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.MenuP{
+    font-size: 16px;
+}
+
+.MenuBtn{
+    width: 110px;
+    height: 26px;
+    background: var(--btn);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
