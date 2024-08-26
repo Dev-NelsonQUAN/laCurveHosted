@@ -2,12 +2,14 @@ import React from 'react'
 import './MenuItems.css'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../Global/Slice'
+import { Toaster } from 'react-hot-toast'
 
 
 const MenuItems = ({e}) => {
   const dispatch = useDispatch()
     console.log(e)
   return (
+    <>
     <div className='MenuItemsHolder'>
         <div className="MenuImg">
             <img src={e.image} alt="" />
@@ -22,6 +24,8 @@ const MenuItems = ({e}) => {
         </div>
 
     </div>
+    <Toaster containerStyle={{position: 'absolute', top: "100px"}}/>
+    </>
   )
 }
 

@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import toast from "react-hot-toast";
 
 const initialState = {
   cart: [],
@@ -24,11 +25,13 @@ const ecommerce = createSlice({
           state.isLoggedIn = true;
           state.loggedInUser = state.ecomUsers[check];
         } else {
+          toast.error("Password Incorrect")
           alert("Password Incorrect");
           throw new Error("Password Incorrect")
         }
       } else {
-        alert("user not found");
+        toast.error("User not found")
+        // alert("user not found");
         throw new Error("user not found")
       }
     },
@@ -36,10 +39,12 @@ const ecommerce = createSlice({
       const check = state.cart.findIndex((e) => e.id == payload.id);
       if (check === -1) {
         state.cart.push({ ...payload, QTY: 1, totalPrice: payload.price });
+        toast.success('Added to cart')
       } else {
         let value = state.cart[check];
         value.QTY += 1;
         value.totalPrice = payload.price * value.QTY;
+        toast.success("It's in your cart already")
       }
       state.total = state.cart.reduce((p, e) => p + e.QTY * e.price, 0);
       state.totalQty = state.cart.reduce((acc, item) => acc + item.QTY, 0);

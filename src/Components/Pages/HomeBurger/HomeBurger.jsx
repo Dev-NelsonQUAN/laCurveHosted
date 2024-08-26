@@ -1,15 +1,22 @@
 import React from "react";
 import "./HomeBurger.css";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logout } from "../../Global/Slice";
 
 const HomeBurger = ({setMenu}) => {
   const Nav = useNavigate();
+  const dispatch = useDispatch()
   return (
-    <div className="HomeBurgerHolder" onClick={() => setMenu(false)}>
+    <div className="HomeBurgerHolder">
       <ul>
-        <li> Home </li>
-        <li> Vendors </li>
-        <li> Categories </li>
+        <li onClick={() => Nav('/anything/home')}> Home </li>
+        <hr />
+        <li onClick={() => Nav('/anything/categories')}> Categories </li>
+        <hr />
+        <li onClick={() => Nav('/anything/vendors')}> Vendors </li>
+        <hr />
+        <li onClick={() => dispatch(logout())}> Logout </li>
       </ul>
     </div>
   );

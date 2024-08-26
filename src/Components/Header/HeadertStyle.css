@@ -1,21 +1,21 @@
 .header-wrapper{
     width: 100%;
     height: 10vh;
-    background-color: transparent;
+    /* background-color: transparent; */
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "poppins", sans-serif;
     position: sticky;
+    /* position: fixed; */
     top: 0px;
-    bottom: 0px;
+    bottom: 100%;
     z-index: 99999;
     /* scroll-behavior: smooth; */
-
 }
 
 .header-inner-wrapper{
-    width: 80%;
+    width: 85%;
     height: 100%;
     /* background-color: aqua; */
     display: flex;
@@ -25,7 +25,6 @@
 }
 
 .Logo-wrapper{
-    /* display: none; */
     width: 170px;
     height: 39px;
     display: flex;
@@ -35,17 +34,16 @@
     border-radius: 80px;
     /* background: #000; */
     justify-content:space-between;
-    /* background-color: beige; */
 }
 
 .HeaderBtn{
-    width: 100%;
-    height: 55px;
+    width: 78%;
+    height: 47px;
     background: var(--btn);
     cursor: pointer;
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 6px;
     align-items: center;
     outline: none;
     border: none;
@@ -60,8 +58,8 @@
 }
 
 .HeaderImg {
-    width: 30px;
-    height: 30px;
+    width: 23px;
+    height: 23px;
     border-radius: 50%;
 }
 
@@ -94,18 +92,19 @@
     align-items: center;
     /* gap:40px; */
     border-radius: 30px;
-
+    margin-right: 90px;
+    /* padding-left: 20px; */
     /* justify-content: space-between; */
 
-
     & li{
-        font-size: 18px;
+        font-size: 19px;
         /* font-family: sans-serif; */
         font-weight: 700;
         list-style-type: none;
         text-decoration: none;
     }
 }
+
 li:hover{
     cursor: pointer;
 }
@@ -122,7 +121,9 @@ li:hover{
     height: 40px;
     border-radius: 50%;
     background: whitesmoke;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     & .iconspers{
         width: 100%;
@@ -152,7 +153,7 @@ li:hover{
     }
 
     .Logo-wrapper{
-        width: 18%;
+        width: 15%;
         height: 40%;
     }
 
@@ -163,21 +164,36 @@ li:hover{
     }
 
     .HeaderImg{
-        width: 22px;
-        height: 22px;
+        width: 20px;
+        height: 20px;
     }
 
     .BottomLaCurve{
-        font-size: 17px;
+        font-size: 13px;
     }
 
     .middle-section{
         width: 40%;
+        height: 30px;
+        margin-right: 60px;
 
         & li {
             font-size: 13px;
         }
     }
+
+    .account{
+        width: 30px;
+        height: 30px;
+
+        .iconspers{
+            width: 80%;
+            height: 80%;
+            /* background: #000; */
+        }
+    }
+
+    
 }
 
 @media screen and (max-width: 425px) {
@@ -195,13 +211,15 @@ li:hover{
     width: 28%;
     height: 42%;
     border-radius: 80px;
+    background: var(--btn);
+    color: white;
  }
 
    .icon-logo{
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    border: 2px solid var(--btn);
+    /* border: 2px solid whitesmoke; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -227,6 +245,9 @@ li:hover{
 
     .menu{
         display: flex;
- 
+        background: var(--btn);
+        /* backdrop-filter: blur(30px); */
+        border-radius: 3px;
+        /* width: 40px; */
     }
 }

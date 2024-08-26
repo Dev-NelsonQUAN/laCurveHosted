@@ -1,44 +1,36 @@
-import React from 'react'
-import './CheckOut.css'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect } from "react";
+import "./CheckOut.css";
+import { useNavigate } from "react-router-dom";
 // import DataJs from '../../dB/data'
-import CheckImg from '../../../assets/sharpMeal2.jpeg'
+import CheckImg from "../../../assets/sharpMeal2.jpeg";
+import CheckOutItems from "./CheckOutItems";
+import Aos from "aos"
+import 'aos/dist/aos.css'
 
-
-const CheckOut = ({filtered}) => {
-    const Nav = useNavigate()
-
+const CheckOut = ({ filtered, setShowOrder }) => {
+  useEffect(() =>{
+    Aos.init()
+  },[])
   return (
-    <div className='CheckOutHolder'>
-        <div className='CheckOut'>
+    <div className="CheckOutHolder" data-aos='flip-right'>
+      <h3 className="X" onClick={() => setShowOrder(false)} data-aos='flip-left'>
+        {" "}
+        X{" "}
+      </h3>
+      <div className="CheckOut">
+        {filtered.map((e) => {
+          return <CheckOutItems e={e}/>;
+        })}
 
-            {/* {
-                DataJs
-            } */}
-            
-            <p className='Names'>Iya Risi</p> 
-
-            <div className='Check'>
-                <img src={CheckImg} alt="image" className='CheckImg'/>
-
-                <div className='CheckOther'> 
-                    <h3 className='Checkerly'> Jolllof Rice </h3>
-                        <p> ₦700 </p>
-                </div>
-            </div>
-
-            
-
-            <div className='proceedBtnHold'>
-            <button className='ProceedBtn'
-            onClick={() => Nav('/home')}
-            > Proceed </button>
-            </div>
-
+        <div className="proceedBtnHold">
+          <button className="ProceedBtn" onClick={() => Nav("/home")}>
+            {" "}
+            Proceed{" "}
+          </button>
         </div>
-
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default CheckOut
+export default CheckOut;

@@ -26,10 +26,32 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
     padding: 10px;
     /* justify-content: space-between; */
     /* flex-wrap: wrap; */
 }
 
+/* @media screen and (max-width: 325px) {
+    .VendorsInner{
+        gap: 1px;
+        background: #000;
+    }
+} */
 
+@media screen and (max-width: 320px) {
+    .Vendors{
+        /* background: #000; */
+        min-height: 90vh;
+        
+    }
+
+    .VendorsInner{
+        gap: 10px;
+        /* background: yellow; */
+        height: auto;
+        /* justify-content: space-evenly; */
+        /* max-height: 80%; */
+    }
+}

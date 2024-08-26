@@ -1,24 +1,23 @@
-// import React from "react";
-// import './CheckOut.css'
+import React, { useEffect } from "react";
+import './CheckOut.css'
 
-// const CheckOutItems = ({e}) => {
-//   return (
-//     <div className="CheckItems">
-//       <p className="Names">Iya Risi</p>
 
-//       <div className="Check">
-//         <img src={e.img} alt="image" className="CheckImg" />
-//         <div className="CheckOther"></div>
-//       </div>
+const CheckOutItems = ({e}) => {
 
-//       <div className="proceedBtnHold">
-//         <button className="ProceedBtn" onClick={() => Nav("/home")}>
-//           {" "}
-//           Proceed{" "}
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
+  return (
+    <div className="CheckOutItemsHolders" >
+      {/* <p className="Names"> {e?.vendor} </p> */}
 
-// export default CheckOutItems;
+      <div className="Check">
+        <img src={e?.image} alt="image" className="CheckImg" />
+
+        <div className="CheckOther">
+          <h3 className="Checkerly"> {e?.dish} </h3>
+          <p> ₦{e?.price} </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CheckOutItems;

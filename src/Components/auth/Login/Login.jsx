@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import {login} from '../../Global/Slice'
 import { zodResolver } from "@hookform/resolvers/zod";
+import toast, { Toaster } from "react-hot-toast";
 
 // import { useEffect, useState } from "react";
 // import { useDispatch, useSelector } from "react-redux";
@@ -33,7 +34,7 @@ const Login=()=>{
             Nav('/anything/home')
         } catch (error) {
             console.log(error)
-            
+            // toast.error('Invalid Password')   
         }
         
     }
@@ -58,13 +59,14 @@ const Login=()=>{
   
    
     return(
+        <>
         <div class="LoginHolder">
         <div className="Login">
             <form 
             onSubmit={handleSubmit(onSubmit)}
             >
                 <label>Login</label>
-                <input type="email" name="email" placeholder="email" required={true}
+                <input type="email" name="email" placeholder="Enter Your email" required={true}
                 //  onChange={(e)=> setFormData((p)=>{
                 //     return {...p, email: e.target.value}
                 // })} required={true}
@@ -72,16 +74,16 @@ const Login=()=>{
                 {...register ('email')}
                 />
                 {
-                    errors.email && <span style={{color: "red"}}> {errors.email.message} </span>
+                    errors.email && <span style={{color: "red"}}> {errors?.email?.message} </span>
                 }
-                <input type="password" name="password" placeholder="password" 
+                <input type="password" name="password" placeholder="Enter Your password" 
                 {...register ('password')}
                 // onChange={(e)=> setFormData((p)=>{
                 //     return {...p, password: e.target.value}
                 // })} required={true}
                 />
                 {
-                    errors.email && <span style={{color: "red"}}> {errors.password.message} </span>
+                    errors.email && <span style={{color: "red"}}> {errors?.password?.message} </span>
                 }
                 <button type="submit" 
                 // onClick={() => Nav("/home")}
@@ -90,6 +92,8 @@ const Login=()=>{
             </form>
         </div>
         </div>
+        <Toaster/>
+        </>
     )
 }
 

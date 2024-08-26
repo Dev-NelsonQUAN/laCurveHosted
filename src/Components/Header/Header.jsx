@@ -8,18 +8,30 @@ import { useDispatch, useSelector } from "react-redux";
 import laCurve from "../../assets/laCurve.jpg";
 import HomeBurger from "../Pages/HomeBurger/HomeBurger";
 import { logout } from "../Global/Slice";
-
+import { FaX } from "react-icons/fa6";
 
 const Header = () => {
   const Nav = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const [droupDown, setDropDown] = useState(false);
-  const [menu, setMenu] = useState(false)
+  const [menu, setMenu] = useState(false);
+  const [x, setX] = useState(false);
 
   const { cart } = useSelector((state) => state);
 
+  const showFirst = () => {
+    setMenu(true);
+    setX(true);
+  };
+
+  const showSecond = () => {
+    setMenu(false);
+    setX(false);
+  };
+
   return (
+    <>
     <div className="header-wrapper">
       <div className="header-inner-wrapper">
         <div className="Logo-wrapper">
@@ -74,11 +86,10 @@ const Header = () => {
             {" "}
             <li>Cart ({cart.length})</li>{" "}
           </NavLink>
-
-
-          <h5 style={{cursor: "pointer"}} onClick={() => dispatch(logout())}>
+{/* 
+          <h5 style={{ cursor: "pointer" }} onClick={() => dispatch(logout())}>
             Logout
-          </h5>
+          </h5> */}
         </div>
         <div className="account-wrapper">
           <div className="account">
@@ -89,15 +100,24 @@ const Header = () => {
           </div>
 
           <div className="menu">
-            <IoMenu onClick={()=> setMenu(true)}/>
-              {
-                menu ? <HomeBurger setMenu={setMenu}/> : null
-              }
+            {!menu ? (
+              <IoMenu color="white" onClick={showFirst} />
+            ) : (
+              <FaX color="white" onClick={showSecond} />
+            )}
+
+            {/* {
+                x ? <FaX color="white"/> : null
+              } */}
           </div>
         </div>
         {droupDown ? <DropDown setDropDown={setDropDown} /> : null}
       </div>
     </div>
+
+    {x ? <HomeBurger setMenu={setMenu} /> : null}
+
+    </>
   );
 };
 

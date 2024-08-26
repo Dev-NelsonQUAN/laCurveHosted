@@ -42,7 +42,10 @@
 
 .MenuDes{
     width: 94%;
-    font-size: 10px;
+    font-size: 12px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: ; */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -50,11 +53,12 @@
 
 .MenuP{
     font-size: 16px;
+    font-weight: bold;
 }
 
 .MenuBtn{
-    width: 110px;
-    height: 26px;
+    width: 125px;
+    height: 36px;
     background: var(--btn);
     color: white;
     outline: none;
@@ -62,4 +66,66 @@
     border-radius: 20px;
     cursor: pointer;
     font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .MenuItemsHolder{
+        width: 42%;
+        height: 38vh;
+    }
+
+    .MenuH5{
+        font-size: 17px;
+    }
+
+    .MenuP{
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .MenuBtn{
+        height: 28px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .MenuItemsHolder{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .MenuItemsHolder{
+        width: 80%;
+        height: 35vh;
+        /* gap: 20px; */
+    }
+
+    .MenuH5{
+        font-size: 15px;
+    }
+
+    .MenuName{
+        gap: 4px;
+    }
+
+    .MenuBtn{
+        width: 110px;
+        height: 22px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .MenuItemsHolder{
+        height: 34vh;
+    }
+
+    .MenuH5{
+        font-size: 13px;
+        /* font-weight: bold; */
+    }
+
+    .MenuBtn{
+        width: 90px;
+        font-size: 12px;
+    }
 }

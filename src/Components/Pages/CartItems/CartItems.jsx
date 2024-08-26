@@ -36,9 +36,7 @@ console.log(filtered)
         <button className="ProceedCheck"
         onClick={() => setShowOrder(true)}
         > Proceed CheckOut </button>
-          {
-            showOrder && <CheckOut filtered={filtered}/>
-          }
+        
         <select onChange={(e)=>setVendors(e.target.value)}>
           <option value="">--CheckOut for?</option>
           <option value="Iya Rice"> Iya Rice </option>
@@ -52,6 +50,9 @@ console.log(filtered)
       </div>
 
       <div className="CartMainHolder">
+      {
+            showOrder && <CheckOut filtered={filtered} setShowOrder={setShowOrder}/>
+          }
         {
           cart.map((e) => {
             return  <CardItemsCard e={e}/>;

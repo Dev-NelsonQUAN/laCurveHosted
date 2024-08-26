@@ -2,10 +2,11 @@
     width: 100%;
     height: max-content;
     min-height: 90vh;
-    background: teal;
+    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: var(--padding);
     /* flex-direction: column; */
     /* overflow-y: auto; */
 }

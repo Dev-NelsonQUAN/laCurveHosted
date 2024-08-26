@@ -1,9 +1,12 @@
 .HeroPage-wrapper {
   width: 100%;
   height: 90vh;
+  /* height: 100vh; */
   /* background-color: aqua; */
   display: flex;
   justify-content: center;
+  /* align-items: center; */
+  /* flex-direction: column; */
 }
 .heropage-inner-wrapper {
   width: 100%;
@@ -27,8 +30,8 @@
 }
 
 .h4 {
-  font-size: 54px;
-  width: 30%;
+  font-size: 60px;
+  width: 25%;
   text-align: center;
   /* background-color: white; */
   /* background: purple; */
@@ -37,15 +40,21 @@
 }
 
 .Btn{
-  width: 250px;
-  height: 45px;
+  width: 200px;
+  height: 35px;
   background: var(--btn);
   color: white;
   outline: none;
   border: none;
   border-radius: 20px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "poppins", sans-serif;
   cursor: pointer;
   font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .h4{
+      width: 50%;
+    }
 }

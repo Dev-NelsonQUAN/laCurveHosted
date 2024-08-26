@@ -2,7 +2,7 @@
     width: 100%;
     min-height: 90vh;
     height: max-content;
-    background: crimson;
+    background: teal;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@
 .CartInner{
     width: 80%;
     height: 60%;
-    background: rgb(5, 40, 155);
+    /* background: rgb(5, 40, 155); */
 }
 
 

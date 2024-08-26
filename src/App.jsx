@@ -10,6 +10,7 @@ import Menu from "./Components/Pages/Menu/Menu";
 import Layout from "./Components/layout/Layout";
 import CheckOut from "./Components/Pages/CheckOut/CheckOut";
 import PrivateRouting from "./Components/auth/PrivateRouting";
+import Category from "./Components/Pages/Category/Category";
 
 
 const router = createHashRouter([
@@ -27,7 +28,7 @@ const router = createHashRouter([
     children: [
       {
         path: 'home',
-        element: <HomePage/>
+        element: <HomePage/>,
       },
       // {
       //   path: '/menu',
@@ -50,14 +51,14 @@ const router = createHashRouter([
         element: <Categories/>
       },
       // {
-      //   path: '/addcart',
-      //   element: <AddCart/>
+      //   path: 'order',
+      //   element: <Category/>
       // },
       {
         path: 'menu/:vendor',
         element: <Menu/>
       }
-    ]
+    ],
   },
 ])
 

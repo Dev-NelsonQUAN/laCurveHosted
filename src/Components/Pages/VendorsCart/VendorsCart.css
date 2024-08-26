@@ -1,21 +1,24 @@
 .VendorsCartHolder{
-    width: 100%;
-    height: 17vh;
+    width: 80%;
+    height: 15vh;
     background: var(--btn); 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     border-radius: 50px;
     font-family: "poppins", sans-serif;
     cursor: pointer;
+    padding: var(--padding);
+    align-items: center;
 }
 
 .FoodImgHolder{
-    width: 20%;
-    height: 100%;
+    width: 20px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: #000; */
+    background: whitesmoke;
+    border-radius: 50%;
 }
 
 .FoodImg{
@@ -42,7 +45,7 @@
 }
 
 .nameP{
-    font-size: 17px;
+    font-size: 15px;
     text-align: center;
 }
 
@@ -51,11 +54,13 @@
 }
 
 .VendorsImgHolder{
-    width: 20%;
-    height: 100%;
+    width: 20px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: whitesmoke;
+    border-radius: 50%;
     /* border-radius: 50%; */
 }
 
@@ -64,4 +69,32 @@
     height: 85px;
     border-radius: 50px;
     object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .VendorsCartHolder{
+        height: 15vh;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .VendorsCartHolder{
+        /* display: block; */
+        height: 12vh;
+        width: 100%;
+    }
+
+    .nameH4{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .VendorsCartHolder{
+        width: 250px;
+        height: 10vh;
+    }
+    .nameH4{
+        font-size: 12px;
+    }
 }
