@@ -26,7 +26,7 @@ const ecommerce = createSlice({
           state.loggedInUser = state.ecomUsers[check];
         } else {
           toast.error("Password Incorrect")
-          alert("Password Incorrect");
+          // alert("Password Incorrect");
           throw new Error("Password Incorrect")
         }
       } else {
