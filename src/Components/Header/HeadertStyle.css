@@ -138,10 +138,12 @@ li:hover{
 .iconspers:hover{
     cursor: pointer;
 }
+
 .HeaderActive{
     text-decoration: none;
     color: #0C513F;
 }
+
 .HeaderNotActive{
     text-decoration: none;
     color: black;

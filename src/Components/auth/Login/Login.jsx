@@ -17,7 +17,7 @@ const Login=()=>{
     // const [formData, setformData] = useState({})
     const User = z.object({
         email: z.string().email(),
-        password: z.string({message: 'Invalid Password'})
+        password: z.string().nonempty({message: 'password is required'})
     })
 
     
@@ -25,8 +25,9 @@ const Login=()=>{
         resolver: zodResolver(User), //apply the zodResolver
     })
 
+    console.log(errors)
     const onSubmit = (data) =>{
-        console.log(errors)
+        console.log(data)
         try {
             
             dispatch(login(data))
@@ -34,7 +35,7 @@ const Login=()=>{
             Nav('/anything/home')
         } catch (error) {
             console.log(error)
-            // toast.error('Invalid Password')   
+            // toast.error()
         }
         
     }
@@ -66,7 +67,8 @@ const Login=()=>{
             onSubmit={handleSubmit(onSubmit)}
             >
                 <label>Login</label>
-                <input type="email" name="email" placeholder="Enter Your email" required={true}
+                <input type="email" name="email" placeholder="Enter Your email" 
+                required={true}
                 //  onChange={(e)=> setFormData((p)=>{
                 //     return {...p, email: e.target.value}
                 // })} required={true}
@@ -83,7 +85,7 @@ const Login=()=>{
                 // })} required={true}
                 />
                 {
-                    errors.email && <span style={{color: "red"}}> {errors?.password?.message} </span>
+                    errors.password && <span style={{color: "red"}}> {errors?.password?.message} </span>
                 }
                 <button type="submit" 
                 // onClick={() => Nav("/home")}
